@@ -1,0 +1,28 @@
+<ion-view view-title="Clients">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="client in clients" class="item-remove-animate item-avatar item-icon-right" 
+      type="item-text-wrap" href="#/tab/clients/{{client._id}}">
+        <h2>{{client.clientNo}}</h2>
+        <p>{{client.firstName}} - {{client.lastName}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="deleteClient(client._id)">
+          Delete
+        </ion-option-button>        
+        <!--<ion-delete-button class="ion-minus-circled" ngclick="deleteClient(client._id)">
+        </ion-delete-button>
+            <ion-option-button class="button-info"
+                       ng-click="edit(item)">
+              Edit
+            </ion-option-button>
+        <ion-option-button class="button-assertive">
+          <a href="#/tab/clients/{{client._id}}">Edit</a>
+        </ion-option-button>  -->      
+      </ion-item>
+      <div class="padding">
+      <a class="button button-block button-positive" href="#/tab/clients/0">Add New Client</a>
+      </div>      
+    </ion-list>
+  </ion-content>
+</ion-view>

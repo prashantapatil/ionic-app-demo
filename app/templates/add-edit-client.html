@@ -1,0 +1,25 @@
+<ion-view view-title="{{header}}">
+  <ion-content class="padding">
+	<div class="list">
+		<label class="item item-input">
+			<span class="input-label">Client ID</span>
+			<input type="text" ng-model="clientData.clientNo">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">First Name</span>
+			<input type="text" ng-model="clientData.firstName"
+			ng-minlength="3">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Last Name</span>
+			<input type="text" ng-model="clientData.lastName"
+			ng-minlength="3">
+		</label>		
+		<div class="padding">
+			<button ng-disabled="!clientData.clientNo || !clientData.firstName || !clientData.lastName"
+			class="button button-block button-positive" ng-click="saveClient()">Submit</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
+
